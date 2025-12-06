@@ -2,9 +2,9 @@
 
 CXX=c++
 CXXFLAGS=-Wall -Wextra -Werror -std=c++98
-SRC=main.cpp ClapTrap.cpp
+SRC=main.cpp ClapTrap.cpp ScavTrap.cpp
 OBJS=$(SRC:.cpp=.o)
-TARGET=claptrap
+TARGET=scavtrap
 
 all: $(TARGET)
 
