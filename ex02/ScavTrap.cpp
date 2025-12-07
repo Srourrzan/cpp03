@@ -55,8 +55,31 @@ ScavTrap::ScavTrap( ScavTrap const & src)
   return ;
 }
 
+void ScavTrap::attack( const std::string & target )
+{
+  if (this->_hitPoint <= 0|| this->_energyPoint <= 0)
+  {
+    std::cout << "ScavTrap" 
+              << this->_name
+              << " cannot attack"
+              << std::endl;
+    return ;
+  }
+  this->_energyPoint--;
+  std::cout << "ScavTrap " << this->_name << " attacks "
+						<< target << ", causing " << this->_attackDamage
+						<< " points of damage !" << std::endl;
+  if (this->_energyPoint <= 0)
+  {
+    std::cout << "ScavTrap has " 
+							<< this->_energyPoint
+							<< std::endl;
+  }
+}
+
 void ScavTrap::guardGate()
 {
+  this->_energyPoint--;
   std::cout << "ScavTrap "
 			<< this->_name
 			<< " is in Gate keeper mode."

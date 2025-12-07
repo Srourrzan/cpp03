@@ -57,6 +57,14 @@ FragTrap::FragTrap( FragTrap const & src )
 
 void FragTrap::highFivesGuys( void )
 {
+  if (this->_hitPoint <= 0 || this->_energyPoint <= 0)
+  {
+    std::cout << "FragTrap "
+              << this->_name
+              << " cannot give high five"
+              << std::endl;
+  }
+  this->_energyPoint--;
   std::cout << this->_name
 			<< " give me high five everyone "
 			<< std::endl;
