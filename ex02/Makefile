@@ -4,7 +4,7 @@ CXX=c++
 CXXFLAGS=-Wall -Wextra -Werror -std=c++98 -MMD
 SRC=main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 OBJS=$(SRC:.cpp=.o)
-TARGET=scavtrap
+TARGET=fragtrap
 
 all: $(TARGET)
 

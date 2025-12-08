@@ -79,6 +79,14 @@ void ScavTrap::attack( const std::string & target )
 
 void ScavTrap::guardGate()
 {
+  if (this->_hitPoint <= 0|| this->_energyPoint <= 0)
+  {
+    std::cout << "ScavTrap" 
+              << this->_name
+              << " cannot guard gate"
+              << std::endl;
+    return ;
+  }
   this->_energyPoint--;
   std::cout << "ScavTrap "
 			<< this->_name
